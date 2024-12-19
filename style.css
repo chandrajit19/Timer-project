@@ -30,21 +30,7 @@ html{
       & span{
           font-size: 5rem;
       }
-      & ::after{
-          display: block;
-          content: '';
-          width: 100%;
-          height: 5px;
-          background-color: red;
-          position: absolute;
-          left: 0px;
-          bottom: -25px; 
-          box-shadow: 
-          0 10px 0px 0px rgb(255, 145, 0),    /* Second line slightly shorter */
-          0 15px 0px 0px rgb(255, 145, 0),    /* Third line shorter */
-          0 20px 0px 0px rgb(255, 145, 0);    /* Fourth line shortest */
-      }
-  
+    
  }
  .box02{
   margin-bottom: 1rem;
@@ -55,11 +41,15 @@ html{
   & button{
       min-width: 5rem;
       padding:2px 5px 2px 5px;
-      box-shadow: 1px 1px 4px .5px gray;
+      box-shadow: 1.5px 1.5px 3px .5px gray;
+      border-radius: 5px;
+      border: none;
+      font-weight: bold;
       cursor: pointer;
       &:active{
           box-shadow: none;
-          margin: 1px 0px 0px 1px;
+          transform: translate(1.5px, 1.5px);
+         
       }
   }
  }
@@ -70,17 +60,19 @@ html{
           padding: 10px;
           min-height: 8rem;
           text-align: center;
+          width: 40%;
       }
 
       .box01 span {
-          font-size: 2rem;
+          font-size: 4rem;
+          font-weight: bold;
       
       }
 
       .box02 button {
-          font-size: 0.7rem;
+          font-size: 1rem;
           min-width: 4rem;
-          padding: 2px 4px;
+          padding: 1.5px 2.5px;
           margin-top: 1.5rem;
           font-weight: bold;
       }
@@ -88,22 +80,26 @@ html{
 
   @media (max-width: 480px) {
       .container {
-          box-shadow: 1px 1px 2px 5px rgb(255, 145, 0);
           padding: 8px;
-          min-height: 6rem;
+          min-height: 8.5rem;
+          width: 70%;
       }
 
       .box01 span {
-          font-size: 1.5rem;
+          font-size: 4rem;
       }
 
       .box02 {
-          gap: 0.5rem;
+          gap: 1rem;
+          min-width: 2rem;
+          font-size: 1rem;
+          
       }
 
       .box02 button {
-          font-size: 0.6rem;
-          min-width: 3.5rem;
-          padding: 1px 2px;
+          font-size: 1.2rem;
+          min-width: 5rem;
+          padding: 2px 4px;
+
       }
   }
